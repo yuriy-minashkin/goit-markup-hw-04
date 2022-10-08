@@ -433,7 +433,42 @@ li {
   color: var(--title-color);
 }
 
+.clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.clients .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  background-color: var(--primary-background-color);
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+}
+
+.clients .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: var(--icon-color);
+}
+
+.clients .link:hover,
+.clients .link:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.clients .link:hover .clients-icon,
+.clients .link:focus .clients-icon {
+  fill: var(--accent-color);
+}
 
 /* ------------------------Portfolio page - Buttons--------------------------------- */
 
@@ -524,6 +559,13 @@ li {
   font-size: 16px;
   line-height: 1.87;
   text-align: left;
+}
+
+.portfolio .item:hover,
+.portfolio .item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+  0px 4px 4px rgba(0, 0, 0, 0.06),
+  1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 
