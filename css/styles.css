@@ -30,9 +30,11 @@ html {
   --primary-background-color: #FFFFFF;
   --secondary-background-color: #F5F4FA;
   --hero-footer-background-color: #2F303A;
+  --hero-background-color: #C4C4C4;
   --active-btn: #188CE8;
   --card-border: #EEEEEE;
   --border-line: #ECECEC;
+  --icon-color: #AFB1B8;
 }
 
 
@@ -61,10 +63,6 @@ body {
   text-align: center;
 }
 
-.list {
-  list-style: none;
-}
-
 a {
   text-decoration: none;
   color: inherit
@@ -82,6 +80,7 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 li {
@@ -129,6 +128,7 @@ li {
 
 .contacts-header {
   display: flex;
+  align-items: center;
 }
 
 .sub-nav .link {
@@ -153,6 +153,8 @@ li {
 }
 
 .contacts-header .link {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -168,16 +170,34 @@ li {
   color: var(--accent-color);
 }
 
-/*-----------------------------Studio page-Hero------------------------------- */
+.header-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
 
+/*-----------------------------Studio page-Hero------------------------------- */
+.hero-photo {
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../images/web-team.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .hero.section {
   margin-left: auto;
   margin-right: auto;
-  padding: 200px 0; 
+  padding: 200px 0;
   text-align: center;
-  background-color: var(--hero-footer-background-color);
+  max-width: 1600px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/web-team.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--hero-background-color);
 }
-
 
 .hero .title {
   max-width: 696px;
@@ -198,7 +218,6 @@ li {
   line-height: 1.87;
   letter-spacing: 0.06em;
   min-width: 216px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-style: none;
   padding: 10px 32px;
@@ -209,6 +228,7 @@ li {
 .hero .btn:hover,
 .hero .btn:focus {
   background-color: var(--active-btn);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
 
@@ -227,6 +247,21 @@ li {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.features-wrap {
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 25px 0;
+  background-color: var(--secondary-background-color);
+}
+
+.features-icon {
+  width: 70px;
+  height: 70px;
 }
 
 .features.section {
@@ -335,11 +370,70 @@ li {
 .team .text {
   font-size: 16px;
   line-height: 1.19;
+  margin-bottom: 16px;
 }
 
 .team .info-box {
   padding: 30px 0;
 }
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*--Social media Icons--*/
+
+.social-media .socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-background-color);
+}
+
+.social-media .socials-link:hover,
+.social-media .socials-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-media .socials-link:hover .social-media-icon,
+.social-media .socials-link:focus .social-media-icon {
+  fill: var(--white-font-color)
+}
+
+.social-media .social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-media-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-color);
+}
+
+.footer .socials-link{
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer .social-media-icon {
+  fill: var(--white-font-color);
+}
+
+/*--------------------Studio page - Clients-------------------*/
+
+.clients .title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  margin-bottom: 50px;
+  color: var(--title-color);
+}
+
+
 
 /* ------------------------Portfolio page - Buttons--------------------------------- */
 
@@ -439,6 +533,24 @@ li {
   margin-left: auto;
   margin-right: auto;
   background-color: var(--hero-footer-background-color);
+}
+
+.footer-list {
+  display: flex;
+  align-items: baseline;
+}
+
+.address-wrap {
+  min-width: 231px;
+  margin-right: 70px;
+}
+
+.footer-join-text {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--white-font-color);
 }
 
 .logo-footer {
