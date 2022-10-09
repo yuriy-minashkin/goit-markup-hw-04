@@ -444,6 +444,7 @@ li {
   align-items: center;
   width: 170px;
   height: 92px;
+  color: var(--icon-color);
   background-color: var(--primary-background-color);
   border: 1px solid var(--icon-color);
   border-radius: 4px;
@@ -454,17 +455,13 @@ li {
 }
 
 .clients-icon {
-  fill: var(--icon-color);
+  fill: currentColor;
 }
 
 .clients .link:hover,
 .clients .link:focus {
+  color: var(--accent-color);
   border: 1px solid var(--accent-color);
-}
-
-.clients .link:hover .clients-icon,
-.clients .link:focus .clients-icon {
-  fill: var(--accent-color);
 }
 
 /* ------------------------Portfolio page - Buttons--------------------------------- */
